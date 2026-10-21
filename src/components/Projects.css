@@ -1,0 +1,4 @@
+.projects__list {
+  display: grid;
+  gap: 26px;
+}

@@ -1,0 +1,142 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 56px;
+  align-items: start;
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 34px;
+}
+
+.contact__list {
+  display: grid;
+  gap: 10px;
+}
+
+.contact__list a,
+.contact__row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  transition:
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.contact__list a:hover {
+  border-color: var(--accent);
+  transform: translateX(3px);
+  text-decoration: none;
+}
+
+.contact__icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--accent-soft);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: var(--accent);
+  flex: 0 0 auto;
+}
+
+.contact__channel {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.35;
+  flex: 1 1 auto;
+}
+
+.contact__label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.contact__value {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* ---- card ---- */
+
+.contact__card {
+  padding: 30px;
+  background:
+    radial-gradient(20rem 12rem at 100% 0%, rgba(34, 211, 238, 0.14), transparent 60%),
+    var(--surface);
+}
+
+.contact__card-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin-bottom: 14px;
+}
+
+.contact__card-title {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+}
+
+.contact__card-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.contact__card-list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.contact__card-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.contact__card-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid var(--accent-2);
+  border-bottom: 2px solid var(--accent-2);
+  transform: rotate(-45deg);
+}
+
+.contact__card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

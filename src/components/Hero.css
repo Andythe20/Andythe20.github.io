@@ -1,0 +1,235 @@
+.hero {
+  padding-top: 72px;
+  padding-bottom: 96px;
+  border-top: none;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.hero__title {
+  margin-bottom: 18px;
+}
+
+.hero__name {
+  background: linear-gradient(120deg, #f1f5f9 0%, var(--accent) 45%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.hero__role {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.hero__role-title {
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--accent-2);
+}
+
+.hero__role-sep {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+
+.hero__role-sub {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.hero__summary {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 60ch;
+  margin-bottom: 26px;
+}
+
+.hero__highlights {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.hero__highlights li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.94rem;
+  color: var(--text-muted);
+}
+
+.hero__highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 13px;
+  height: 7px;
+  border-left: 2px solid var(--accent-2);
+  border-bottom: 2px solid var(--accent-2);
+  transform: rotate(-45deg);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.hero__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.hero__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.hero__socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero__socials a {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: rgba(148, 163, 184, 0.06);
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.hero__socials a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* ---- visual ---- */
+
+.hero__visual {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.specialty-card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background:
+    radial-gradient(22rem 14rem at 100% 0%, rgba(34, 211, 238, 0.13), transparent 60%),
+    var(--surface);
+}
+
+.specialty-card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.specialty-card__title {
+  font-size: 1.4rem;
+  line-height: 1.25;
+  margin-top: -8px;
+}
+
+.specialty-card__list {
+  display: grid;
+  gap: 16px;
+}
+
+.specialty-card__list li {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.specialty-card__icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+}
+
+.specialty-card__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.45;
+}
+
+.specialty-card__label {
+  font-weight: 600;
+  font-size: 0.96rem;
+}
+
+.specialty-card__detail {
+  font-size: 0.87rem;
+  color: var(--text-muted);
+}
+
+.specialty-card__foot {
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 0.86rem;
+  color: var(--text-dim);
+}
+
+@media (max-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .hero__visual {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding-top: 48px;
+  }
+
+  .hero__actions .btn {
+    flex: 1 1 auto;
+  }
+}

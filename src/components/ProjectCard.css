@@ -1,0 +1,470 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+.project-card__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px;
+  background: linear-gradient(160deg, rgba(34, 211, 238, 0.07), rgba(52, 211, 153, 0.05));
+}
+
+.project-card__media {
+  position: relative;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+
+.project-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(18rem 10rem at 20% 0%, rgba(34, 211, 238, 0.2), transparent 60%),
+    radial-gradient(16rem 10rem at 85% 100%, rgba(52, 211, 153, 0.16), transparent 60%),
+    linear-gradient(140deg, #0f172a, #0b1120);
+}
+
+.project-card__placeholder small {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: rgba(226, 232, 240, 0.4);
+}
+
+.project-card__placeholder span {
+  font-family: var(--font-mono);
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: rgba(226, 232, 240, 0.28);
+}
+
+.project-card__status {
+  justify-self: start;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #04202a;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  font-weight: 600;
+}
+
+.project-card__caption {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
+/* ---- marco de monitor (captura web) ---- */
+
+.monitor {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.monitor__screen {
+  width: 100%;
+  padding: 9px 9px 10px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+.monitor__chrome {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px 8px;
+}
+
+.monitor__dots {
+  display: inline-flex;
+  gap: 5px;
+}
+
+.monitor__dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #475569;
+}
+
+.monitor__dots i:nth-child(1) {
+  background: #f87171;
+}
+
+.monitor__dots i:nth-child(2) {
+  background: #fbbf24;
+}
+
+.monitor__dots i:nth-child(3) {
+  background: #34d399;
+}
+
+.monitor__url {
+  flex: 1;
+  text-align: center;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.1);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.monitor__viewport {
+  aspect-ratio: 16 / 9;
+  border-radius: 7px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.monitor__viewport img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.monitor__chin {
+  width: 42%;
+  height: 16px;
+  margin-top: -1px;
+  border-radius: 0 0 10px 10px;
+  background: linear-gradient(180deg, #0f172a, #0b1120);
+  border: 1px solid var(--border-strong);
+  border-top: none;
+  display: grid;
+  place-items: center;
+}
+
+.monitor__chin::after {
+  content: '';
+  width: 24px;
+  height: 3px;
+  border-radius: 999px;
+  background: #334155;
+}
+
+.monitor__stand {
+  width: 38px;
+  height: 18px;
+  background: linear-gradient(180deg, #1e293b, #0b1120);
+  border-left: 1px solid var(--border-strong);
+  border-right: 1px solid var(--border-strong);
+}
+
+.monitor__base {
+  width: 124px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #1e293b, #0b1120);
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 6px 16px rgba(2, 6, 23, 0.6);
+}
+
+/* ---- marco de telefono (captura movil) ---- */
+
+.project-card__mobile {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.phone {
+  width: 188px;
+  padding: 10px 8px 12px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #1e293b, #0b1120);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow);
+}
+
+.phone__notch {
+  display: block;
+  width: 64px;
+  height: 14px;
+  margin: 0 auto 8px;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid #1e293b;
+}
+
+.phone__screen {
+  border-radius: 22px;
+  overflow: hidden;
+  background: #0f172a;
+}
+
+.phone__screen img {
+  display: block;
+  width: 100%;
+  background: #0f172a;
+}
+
+.phone__bar {
+  display: block;
+  width: 62px;
+  height: 4px;
+  margin: 10px auto 0;
+  border-radius: 999px;
+  background: #334155;
+}
+
+.project-card__mobile-placeholder {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 8px;
+  aspect-ratio: 262 / 505;
+  border-radius: 18px;
+  border: 1px dashed var(--border-strong);
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.project-card__mobile-placeholder small {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  color: rgba(226, 232, 240, 0.4);
+}
+
+.project-card__mobile-caption {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  text-align: center;
+  max-width: 32ch;
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.project-card__header h3 {
+  margin-bottom: 6px;
+}
+
+.project-card__tagline {
+  color: var(--accent-2);
+  font-size: 0.88rem;
+  font-family: var(--font-mono);
+}
+
+.project-card__description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.project-card__problem,
+.project-card__role {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.project-card__problem-label,
+.project-card__role-label,
+.project-card__ecosystem-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.project-card__role-label {
+  display: inline;
+  margin-right: 8px;
+}
+
+.project-card__highlights {
+  display: grid;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.project-card__highlights li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.project-card__highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 11px;
+  height: 6px;
+  border-left: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(-45deg);
+}
+
+.project-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.project-card__ecosystem {
+  padding: 16px;
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-strong);
+  background: rgba(148, 163, 184, 0.05);
+}
+
+.project-card__ecosystem ul {
+  display: grid;
+  gap: 7px;
+}
+
+.project-card__ecosystem a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.project-card__ecosystem a:hover {
+  color: var(--accent);
+}
+
+.project-card__private {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 15px;
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-strong);
+  background: rgba(148, 163, 184, 0.05);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+/* ---- featured (SIFA) ---- */
+
+.project-card--featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: start;
+}
+
+.project-card--featured .project-card__gallery {
+  height: 100%;
+  border-right: 1px solid var(--border);
+}
+
+.project-card--featured .project-card__body {
+  padding: 32px;
+}
+
+@media (max-width: 900px) {
+  .project-card--featured {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card--featured .project-card__gallery {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+/* ---- cuadro para imagen de arquitectura ---- */
+
+.project-figure {
+  margin: 0;
+  grid-column: 1 / -1;
+  padding: 0 32px 32px;
+}
+
+.project-figure__frame {
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius);
+  background: rgba(148, 163, 184, 0.04);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  display: grid;
+}
+
+.project-figure__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-figure__placeholder {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 30px;
+  text-align: center;
+  color: var(--text-dim);
+}
+
+.project-figure__placeholder-title {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.project-figure__placeholder-file {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  padding: 4px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--accent);
+}
+
+.project-figure__caption {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  max-width: 90ch;
+}
+
+@media (max-width: 900px) {
+  .project-figure {
+    padding: 0 24px 24px;
+  }
+}
